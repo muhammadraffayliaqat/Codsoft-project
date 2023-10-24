@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cal.css">
+    <title>calculater</title>
+</head>
+<body>
+  
+    <div class="container">
+        <h1>Calculator!</h1>
+        <form class="calc">
+            <input type="text" name="text" placeholder="0" id="screen-box">
+        </form>
+        <div class="btns">
+            <button onclick="calculateFunction('sin')">Sin</button>
+            <button onclick="calculateFunction('cos')">Cos</button>
+            <button onclick="calculateFunction('tan')">Tan</button>
+            <button onclick="calculateFunction('log')">Log</button>
+
+            <button onclick="calculateFunction('sqr')">x<sup>2</sup></button>
+            <button onclick="calculateFunction('cube')">x<sup>3</sup></button>
+            <button onclick="calculateFunction('sqrt')"> &radic;</button>
+            <button onclick="calculateFunction('cbrt')">&#8731;</button>
+
+            <button onclick="calculateFunction('e')">e</button>
+            <button onclick="calculateFunction('ln')">Ln</button>
+            <button onclick="calculateFunction('pow10')">10^x</button>
+            <button onclick="calculateFunction('pow')">x^y</button>
+            
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('/')">/</button>
+            
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('*')">*</button>
+            
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('-')">-</button>
+            
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button onclick="appendCharacter('%')">%</button>
+            <button onclick="appendCharacter('+')">+</button>
+            
+            <button onclick="calculateFunction('exp')">Exp</button>
+            <button onclick="deleteLastCharacter()">DEL</button>
+            <button onclick="clearInput()">C</button>
+            <button onclick="calculateResult()">=</button>
+            
+           
+        </div>
+    </div>
+    <script type="text/javascript">
+        function appendCharacter(character) {
+            var screen = document.getElementById('screen-box');
+            screen.value += character;
+        }
+
+        function calculateResult() {
+            var screen = document.getElementById('screen-box');
+            try {
+                screen.value = eval(screen.value);
+            } catch (error) {
+                screen.value = 'Error';
+            }
+        }
+
+        function clearInput() {
+            var screen = document.getElementById('screen-box');
+            screen.value = '';
+        }
+
+        function deleteLastCharacter() {
+            var screen = document.getElementById('screen-box');
+            screen.value = screen.value.slice(0, -1);
+        }
+
+        function calculateFunction(func) {
+            var screen = document.getElementById('screen-box');
+           try {
+                if (func === 'sin') {
+                    screen.value = Math.sin(eval(screen.value));
+                } else if (func === 'cos') {
+                    screen.value = Math.cos(eval(screen.value));
+                } else if (func === 'tan') {
+                    screen.value = Math.tan(eval(screen.value));
+                } else if (func === 'log') {
+                    screen.value = Math.log(eval(screen.value));
+                } else if (func === 'sqr') {
+                    screen.value = Math.pow(eval(screen.value), 2);
+                } else if (func === 'cube') {
+                    screen.value = Math.pow(eval(screen.value), 3);
+                } else if (func === 'sqrt') {
+                    screen.value = Math.sqrt(eval(screen.value));
+                } else if (func === 'cbrt') {
+                    screen.value = Math.cbrt(eval(screen.value));
+                } else if (func === 'exp') {
+                    screen.value = Math.exp(eval(screen.value));
+                }else if (func === 'e') {
+                    screen.value = Math.e(eval(screen.value));
+                } else if (func === 'ln') {
+                    screen.value = Math.log(eval(screen.value));
+                } else if (func === 'pow10') {
+                    screen.value = Math.pow(10, eval(screen.value));
+                } else if (func === 'pow') {
+                    screen.value = Math.pow(eval(screen.value), eval(prompt("Enter the exponent (y): ")));
+                }
+            } catch (error) {
+                screen.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

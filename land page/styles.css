@@ -1,0 +1,166 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.head_main{
+    width:100%;
+    height:8vh;
+    background:#fdffff ;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+.nav-lef{
+    color: rgb(49, 53, 53);
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8vh;
+    margin-left: 40px;
+    line-height: 7.5vh;
+}
+li{
+    list-style: none;
+    padding-left: 15px;
+    font-weight: 900;
+    font-size: 20px;
+}
+.li-now{
+    background-color: chocolate;
+    padding-right: 6px;
+    height: 7.3vh;
+}
+nav ul li a{
+   text-decoration: none;
+   color:rgb(67, 67, 67);
+}
+.head-search{
+    margin-left: 15vh;
+    line-height: 7vh;
+}
+.head-search input{
+    border-radius: 15%;
+    height: 5vh;
+    border: none;
+    font-size: larger;
+}
+.head-search i{
+   font-weight: 900;
+   color: rgb(12, 12, 12);
+   height: 5vh;
+}
+/* ---------------------------- image-sec---------------------------- */
+.image-sec{
+   background-image: url(image-second.jpg);
+    background-repeat : no-repeat;
+    background-position: center;
+    background-size: cover;
+     width: 100%;
+    height: 95vh;
+    padding-top: 50vh;
+    line-height: 7vh;
+    padding-left: 25vh;
+    font-size: xx-large;
+
+}
+.btns-1{
+    border-radius: 30%;
+    width: 8%;
+    height: 35px;
+    background:linear-gradient(to right,rgb(216, 101, 19),rgb(204, 48, 165));
+    color:white;
+}
+.btns-2{
+    border-radius: 30%;
+    width: 13%;
+    height: 35px;
+}
+/* -------------------------------features-sec----------------------------- */
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    padding-top: 20px;
+    background:linear-gradient(to right,rgb(216, 101, 19),rgb(204, 48, 165));
+ 
+}
+.features div i{
+    font-size: xx-large;
+    color: white;
+} 
+/* --------------------------------------about-sec------------------------- */
+.about{
+    display: flex;
+    justify-content:center;
+    height: 60vh;
+    width: 100%;
+    margin-top: 30px;
+}
+.left{
+    width: 40%;
+    height:15vh;
+    text-align:start;
+    margin-top: 10px;
+}
+.left h1{
+  border-bottom: 3px solid saddlebrown ;
+  width: 140px;
+  margin-bottom: 20px;
+ 
+}
+.left button{
+   margin-top: 20px;
+    width: 15%;
+    height: 5vh;
+    border-radius: 10px;
+    background:linear-gradient(to right,rgb(216, 101, 19),rgb(204, 48, 165));
+}
+.right img{
+    width: 100%;
+    height: 59vh;
+}
+/* --------------------------------services-sec--------------------------- */
+.Services{
+    display:flex ;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    text-align: end;
+}
+.Services i{
+    width: 13%;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius:  50%; 
+    padding-right: 9px;
+    padding-top: 3px;
+    background:linear-gradient(to right,rgb(216, 101, 19),rgb(204, 48, 165));
+    color: white;
+}
+.Services h2{
+    position: relative;
+    bottom: 25px;
+    background-color: white;
+    width: 90%;
+}
+
+.serv-sec h1{
+    border-bottom: 3px solid saddlebrown ;
+    width: 190px;
+    margin: 30px ;
+    margin-left: 110px;
+}
+.footer{
+    background:black;   
+    color: white;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+    
